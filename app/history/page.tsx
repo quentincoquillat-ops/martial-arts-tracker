@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { getSessions, getActiveArts } from '@/lib/db';
-import { Session, MartialArt } from '@/types';
+import { Session } from '@/types';
 import { NavBar } from '@/components/NavBar';
-import { format } from 'date-fns'; // Wait, I didn't add date-fns. I should use native Intl.
 
 function formatDate(iso: string) {
     return new Date(iso).toLocaleString('en-US', {
