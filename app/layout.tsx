@@ -18,6 +18,10 @@ export const viewport: Viewport = {
     // Note: "shrink-to-fit" n'est pas supporté en objet Viewport Next.
 };
 
+import { Header } from "@/components/Header";
+
+// ... imports
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -25,7 +29,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className + " bg-gray-50 min-h-screen pb-safe"}>
+            <body className="min-h-screen pb-safe antialiased font-[family-name:var(--font-noto-serif-sc),_Times,_serif]">
+                <Header />
                 {children}
             </body>
         </html>
